@@ -1,0 +1,166 @@
+body {
+    background-color: red; 
+    color: white; 
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; 
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+button {
+    background-color: white;
+    color: red;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 1.5rem;
+    border-radius: 50px; /* Botones redondeados */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: pink;
+    color: red;
+    transform: scale(1.1);
+}
+
+#botones {
+    display: flex;
+    gap: 20px;
+}
+
+/* Estilos para los corazones */
+.corazon {
+    position: fixed;
+    bottom: 0;
+    width: 50px;
+    height: 20px;
+    background-color: pink;
+    clip-path: polygon(50% 15%, 61% 0, 75% 0, 85% 15%, 85% 30%, 50% 70%, 15% 30%, 15% 15%, 25% 0, 39% 0);
+    animation: flotar 5s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes flotar {
+    0% {
+        transform: translateY(0);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+#mensaje {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 20px;
+    max-width: 80%;
+}
+
+/*Lista*/
+#lista-razones {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.5rem;
+    color: white;
+}
+
+#lista-razones li {
+    background: rgba(187, 182, 186, 0.2);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    text-align: center;
+    opacity: 0;
+    animation: aparecer 1s ease-in-out forwards;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*Fotos*/
+.carrusel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.carrusel img {
+    width: 350px; /* Ajusta el tamaño de las imágenes */
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+#frase-carrusel {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+}
+
+#album {
+    position: fixed;
+    bottom: 20px; /* Pegado a la parte inferior */
+    left: 20px; /* Pegado a la parte izquierda */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 150px; /* No ocupará más de la mitad de la pantalla */
+    background: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+#album img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#descripcion-album {
+    color: white;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/*Carta*/
+#btnEnlace {
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    color: red;
+    padding: 10px 20px;
+    font-size: 2rem;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+#btnEnlace:hover {
+    background-color: pink;
+    color: red;
+    transform: scale(1.1);
+}
+
